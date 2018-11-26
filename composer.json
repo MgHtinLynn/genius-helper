@@ -1,0 +1,37 @@
+{
+    "name": "htinlynn/genius",
+    "description": "service for ooredoo sms and m-pitesan",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "htinlynn",
+        "genius"
+    ],
+    "authors": [
+        {
+            "name": "htinlynn",
+            "email": "htinlin01@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Genius\\": "src/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+      "laravel": {
+        "providers": [
+            "Genius\\GeniusServiceProvider"
+        ]
+      }
+    }
+}
