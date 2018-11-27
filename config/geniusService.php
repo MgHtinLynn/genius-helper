@@ -11,19 +11,40 @@ return [
     |
     */
 
-    'token' =>  env('ooredooToken','OoredooSampleToken'),
+    'token' => env('ooredooToken', 'OoredooSampleToken'),
 
     /*
     |--------------------------------------------------------------------------
-    | Alias Blacklist
+    | Ooredoo Receiver Number
     |--------------------------------------------------------------------------
     |
-    | Typically, Tinker automatically aliases classes as you require them in
-    | Tinker. However, you may wish to never alias certain classes, which
-    | you may accomplish by listing the classes in the following array.
+    | This option allows you to add Ooredoo Serivce Received Number that should related with Ooredoo Merchant Account
     |
     */
 
-    'dont_alias' => [],
+    'receivedNumber' => env('receivedNumber', 'ExampleOoredooMerchantNumber'),
+
+
+    /*
+    |--------------------------------------------------------------------------
+    | Ooredoo Testing
+    |--------------------------------------------------------------------------
+    |
+    | This option allows you to add Ooredoo Serivce URL that should related with Ooredoo Merchant Account
+    |
+    */
+
+    'ooredooUrl' => env('ooredooUrl', ''),
+    
+    /*
+    |--------------------------------------------------------------------------
+    | Ooredoo Testing
+    |--------------------------------------------------------------------------
+    |
+    | This option allows you to add Ooredoo Serivce Testing that should related with Ooredoo Merchant Account
+    |
+    */
+
+    'testing' => env('ooredooTesting', false),
 
 ];
