@@ -11,7 +11,7 @@ namespace Genius\Services;
 
 use Genius\Contacts\Genius;
 
-class GeniusService implements Genius
+abstract class GeniusService implements Genius
 {
     private $token;
     private $receivedNumber;
@@ -32,6 +32,7 @@ class GeniusService implements Genius
     /**
      * @param array $phoneNumber
      * @param string $message
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return Genius
      */
     public function sendSMSService(array $phoneNumber, string $message): Genius
@@ -45,7 +46,6 @@ class GeniusService implements Genius
             return $this->validateError();
         }
         return $this->requestAPI($data);
-
     }
 
     /**
@@ -96,6 +96,7 @@ class GeniusService implements Genius
 
     /**
      * @param $data
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     private function requestAPI($data)
     {
