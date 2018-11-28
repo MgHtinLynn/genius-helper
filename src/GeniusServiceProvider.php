@@ -16,7 +16,7 @@ class GeniusServiceProvider extends PackageServiceProvider
      *
      * @var string
      */
-    protected $package = 'genius-service';
+    protected $package = 'genius';
     /**
      *
      */
