@@ -11,7 +11,7 @@ namespace Genius\Services;
 
 use Genius\Contacts\Genius;
 
-abstract class GeniusService implements Genius
+class GeniusService implements Genius
 {
     private $token;
     private $receivedNumber;
