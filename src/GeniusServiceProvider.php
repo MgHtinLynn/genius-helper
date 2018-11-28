@@ -49,7 +49,7 @@ class GeniusServiceProvider extends ServiceProvider
      */
     private function registerGeniusService()
     {
-        $this->singleton(GeniusContract::class, GeniusService::class);
+        $this->app->singleton(GeniusContract::class, GeniusService::class);
 
         // Registering the Facade
         if ($facade = $this->config()->get('geniusService.facade')) {
