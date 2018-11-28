@@ -15,20 +15,17 @@ use Illuminate\Support\Facades\Session;
 
 class GeniusService implements Genius
 {
-    private $token;
-    private $receivedNumber;
-    private $testing;
-    private $url;
+//    private $token;
+//    private $receivedNumber;
+//    private $testing;
+//    private $url;
 
     /**
      * Genius constructor.
      */
     public function __construct()
     {
-        $this->token = config('geniusService.token');
-        $this->receivedNumber = config('geniusService.receivedNumber');
-        $this->testing = config('geniusService.testing');
-        $this->url = config('general.ooredooUrl');
+
     }
 
     /**
@@ -150,4 +147,12 @@ class GeniusService implements Genius
     }
 
 
+    /**
+     * @param string $service
+     * @return string
+     */
+    public function setService(string $service): string
+    {
+        return $service;
+    }
 }

@@ -22,5 +22,7 @@ interface Genius
      * @return Genius
      */
     public function sendSMSService(array $phoneNumber, string $message): self;
+
+    public function setService(string $service);
 }
 
