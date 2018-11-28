@@ -6,6 +6,17 @@ use Genius\Services\GeniusService;
 use Genius\Contacts\Genius as GeniusContract;
 class GeniusServiceProvider extends PackageServiceProvider
 {
+    /* -----------------------------------------------------------------
+     |  Properties
+     | -----------------------------------------------------------------
+     */
+
+    /**
+     * Package name.
+     *
+     * @var string
+     */
+    protected $package = 'genius-service';
     /**
      *
      */
