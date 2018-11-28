@@ -34,10 +34,10 @@ class SMSService implements SMS
     /**
      * @param array $phoneNumber
      * @param string $message
-     * @return SMS
+     * @return bool
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function sendSMSService(array $phoneNumber, string $message) :SMS
+    public function sendSMSService(array $phoneNumber, string $message) :bool
     {
         $apiKey = urlencode($this->token);
         $numbers = implode(',', $phoneNumber);
@@ -45,9 +45,10 @@ class SMSService implements SMS
         $data = $this->getData($apiKey, $numbers, $sender, $message);
         $validate = $this->validateData($data);
         if (!$validate) {
-            return $this->validateError();
+            $this->validateError();
         }
         $this->requestAPI($data);
+        return true;
     }
 
     /**
