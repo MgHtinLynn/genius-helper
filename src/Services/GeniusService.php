@@ -9,11 +9,11 @@
 namespace Genius\Services;
 
 
-use Genius\Contacts\SMS;
+use Genius\Contacts\Genius;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Session;
 
-class SMSService implements SMS
+class GeniusService implements Genius
 {
     private $token;
     private $receivedNumber;
@@ -101,7 +101,7 @@ class SMSService implements SMS
     /**
      * @param $data
      *
-     * @return SMS
+     * @return Genius
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     protected function requestAPI($data)

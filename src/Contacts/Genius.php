@@ -9,7 +9,7 @@
 namespace Genius\Contacts;
 
 
-interface SMS
+interface Genius
 {
     /**
      * Genius constructor.
