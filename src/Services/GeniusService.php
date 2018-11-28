@@ -10,6 +10,8 @@ namespace Genius\Services;
 
 
 use Genius\Contacts\Genius;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Session;
 
 class GeniusService implements Genius
 {
@@ -89,8 +91,8 @@ class GeniusService implements Genius
     private function validateError()
     {
         Log::error('Validate Data Error');
-        session()->flash('api.status', 500);
-        session()->flash('api.message', 'Validate Data Wrong');
+        //Session::flash('api.status', 500);
+        //session()->flash('api.message', 'Validate Data Wrong');
         return;
     }
 
@@ -112,8 +114,8 @@ class GeniusService implements Genius
             if ($body->status === 'failure') {
                 return $this->validateMessage($body);
             } else {
-                session()->flash('genius.message', 200);
-                session()->flash('genius.message', 'Successfully to send SMS to User');
+                //session()->flash('genius.message', 200);
+                //session()->flash('genius.message', 'Successfully to send SMS to User');
                 Log::info('Successfully to send SMS ' . $data['numbers']);
             }
         } catch (\Exception $e) {
