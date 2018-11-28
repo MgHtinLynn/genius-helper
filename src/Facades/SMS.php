@@ -8,14 +8,14 @@
 
 namespace Genius\Facades;
 use Illuminate\Support\Facades\Facade;
-use Genius\Contacts\Genius as GeniusContract;
+use Genius\Contacts\SMS as SMSContract;
 
-class Genius extends Facade
+class SMS extends Facade
 {
     /**
      * Get the registered name of the component.
      *
      * @return string
      */
-    protected static function getFacadeAccessor() { return GeniusContract::class; }
+    protected static function getFacadeAccessor() { return SMSContract::class; }
 }

@@ -2,8 +2,8 @@
 namespace genius;
 
 use Arcanedev\Support\PackageServiceProvider;
-use Genius\Services\GeniusService;
-use Genius\Contacts\Genius as GeniusContract;
+use Genius\Services\SMSService;
+use Genius\Contacts\SMS as SMSContract;
 class GeniusServiceProvider extends PackageServiceProvider
 {
     /* -----------------------------------------------------------------
@@ -16,7 +16,7 @@ class GeniusServiceProvider extends PackageServiceProvider
      *
      * @var string
      */
-    protected $package = 'geniusService';
+    protected $package = 'SMSService';
     /**
      *
      */
@@ -34,7 +34,7 @@ class GeniusServiceProvider extends PackageServiceProvider
     public function provides()
     {
         return [
-            GeniusContract::class,
+            SMSContract::class,
         ];
     }
 
@@ -60,11 +60,11 @@ class GeniusServiceProvider extends PackageServiceProvider
      */
     private function registerGeniusService()
     {
-        $this->bind(GeniusContract::class, GeniusService::class);
+        $this->bind(SMSContract::class, SMSService::class);
 
         // Registering the Facade
-        if ($facade = $this->config()->get('geniusService.facade')) {
-            $this->alias($facade, Facades\Genius::class);
+        if ($facade = $this->config()->get('SMSService.facade')) {
+            $this->alias($facade, Facades\SMS::class);
         }
     }
 }

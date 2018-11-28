@@ -9,19 +9,19 @@
 namespace Genius\Contacts;
 
 
-interface Genius
+interface SMS
 {
     /**
      * Genius constructor.
      */
     public function __construct();
+
     /**
      * @param array $phoneNumber
      * @param string $message
-     * @throws \GuzzleHttp\Exception\GuzzleException
-     * @return Genius
+     * @return bool
      */
-    public function sendSMSService(array $phoneNumber, string $message): self;
+    public function sendSMSService(array $phoneNumber, string $message): bool;
 
     public function setService(string $service) :string;
 }

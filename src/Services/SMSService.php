@@ -9,32 +9,35 @@
 namespace Genius\Services;
 
 
-use Genius\Contacts\Genius;
+use Genius\Contacts\SMS;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Session;
 
-class GeniusService implements Genius
+class SMSService implements SMS
 {
-//    private $token;
-//    private $receivedNumber;
-//    private $testing;
-//    private $url;
+    private $token;
+    private $receivedNumber;
+    private $testing;
+    private $url;
 
     /**
      * Genius constructor.
      */
     public function __construct()
     {
-
+        $this->token = config('geniusService.token');
+        $this->receivedNumber = config('geniusService.receivedNumber');
+        $this->testing = config('geniusService.testing');
+        $this->url = config('general.ooredooUrl');
     }
 
     /**
      * @param array $phoneNumber
      * @param string $message
-     * @return Genius
+     * @return SMS
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function sendSMSService(array $phoneNumber, string $message) :Genius
+    public function sendSMSService(array $phoneNumber, string $message) :SMS
     {
         $apiKey = urlencode($this->token);
         $numbers = implode(',', $phoneNumber);
@@ -82,22 +85,23 @@ class GeniusService implements Genius
         return true;
     }
 
+
     /**
-     *
+     * @return bool
      */
     protected function validateError()
     {
         Log::error('Validate Data Error');
         //Session::flash('api.status', 500);
         //Session::flash('api.message', 'Validate Data Wrong');
-        return;
+        return false;
     }
 
     /**
      * @param $data
-     * @throws \GuzzleHttp\Exception\GuzzleException
      *
-     * @return Genius
+     * @return SMS
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     protected function requestAPI($data)
     {
@@ -108,8 +112,7 @@ class GeniusService implements Genius
                 'form_params' => $data
             ]);
 
-            $body = $response->getBody();
-            $body = json_decode($body);
+            $body = json_decode($response->getBody());
             if ($body->status === 'failure') {
                 return $this->validateMessage($body);
             } else {
@@ -125,6 +128,7 @@ class GeniusService implements Genius
 
     /**
      * @param $body
+     * @return bool
      */
     protected function validateMessage($body)
     {
@@ -132,18 +136,19 @@ class GeniusService implements Genius
         Log::error('Fail Ooredoo SMS Service Fail because of ' . $message);
         //Session::flash('genius.message', 500);
         //Session::flash('genius.message', 'Fail to send SMS to User');
-        return;
+        return false;
     }
 
     /**
      * @param $e
+     * @return bool
      */
     protected function throwException($e)
     {
         Log::error('Fail Ooredoo SMS Service Fail because of ' . $e->getMessage());
         //Session::flash('api.status', 500);
         //Session::flash('api.message', 'Something Wrong! Ooredoo SMS Service Fail');
-        return;
+        return false;
     }
 
 
