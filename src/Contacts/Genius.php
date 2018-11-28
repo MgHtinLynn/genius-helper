@@ -18,6 +18,7 @@ interface Genius
     /**
      * @param array $phoneNumber
      * @param string $message
+     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return Genius
      */
     public function sendSMSService(array $phoneNumber, string $message): self;

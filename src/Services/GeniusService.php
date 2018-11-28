@@ -99,6 +99,8 @@ class GeniusService implements Genius
     /**
      * @param $data
      * @throws \GuzzleHttp\Exception\GuzzleException
+     *
+     * @return Genius
      */
     protected function requestAPI($data)
     {
