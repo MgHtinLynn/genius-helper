@@ -34,10 +34,10 @@ class GeniusService implements Genius
     /**
      * @param array $phoneNumber
      * @param string $message
-     * @throws \GuzzleHttp\Exception\GuzzleException
      * @return Genius
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function sendSMSService(array $phoneNumber, string $message): Genius
+    public function sendSMSService(array $phoneNumber, string $message) :Genius
     {
         $apiKey = urlencode($this->token);
         $numbers = implode(',', $phoneNumber);
@@ -47,7 +47,7 @@ class GeniusService implements Genius
         if (!$validate) {
             return $this->validateError();
         }
-        return $this->requestAPI($data);
+        $this->requestAPI($data);
     }
 
     /**
@@ -119,7 +119,6 @@ class GeniusService implements Genius
                 //session()->flash('genius.message', 200);
                 //session()->flash('genius.message', 'Successfully to send SMS to User');
                 Log::info('Successfully to send SMS ' . $data['numbers']);
-                return;
             }
         } catch (\Exception $e) {
             return $this->throwException($e);
