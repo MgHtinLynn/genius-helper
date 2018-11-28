@@ -4,7 +4,7 @@ namespace genius;
 use \Illuminate\Support\ServiceProvider;
 use Genius\Services\GeniusService;
 use Genius\Contacts\Genius as GeniusContract;
-class GeniusServiceProvider extends ServiceProvider
+class GeniusServiceProvider extends PackageServiceProvider
 {
     /**
      *
@@ -16,6 +16,18 @@ class GeniusServiceProvider extends ServiceProvider
                 __DIR__ . '/../config/geniusService.php' => config_path('geniusService.php'),
             ], 'config');
         }
+    }
+
+    /**
+     * Get the services provided by the provider.
+     *
+     * @return array
+     */
+    public function provides()
+    {
+        return [
+            GeniusContract::class,
+        ];
     }
 
     /**
