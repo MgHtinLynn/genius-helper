@@ -2,6 +2,7 @@
 namespace genius;
 
 use Arcanedev\Support\PackageServiceProvider;
+use Genius\Providers\CommandsServiceProvider;
 use Genius\Services\SMSService;
 use Genius\Contacts\SMS as SMSContract;
 class GeniusServiceProvider extends PackageServiceProvider
@@ -47,7 +48,7 @@ class GeniusServiceProvider extends PackageServiceProvider
         $this->registerConfig();
         $this->registerGeniusService();
         $this->registerAliases();
-        $this->registerConsoleServiceProvider(Providers\CommandsServiceProvider::class);
+        $this->registerConsoleServiceProvider(CommandsServiceProvider::class);
     }
 
 
