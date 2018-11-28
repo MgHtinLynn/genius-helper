@@ -47,6 +47,7 @@ class GeniusServiceProvider extends PackageServiceProvider
         $this->registerConfig();
         $this->registerGeniusService();
         $this->registerAliases();
+        $this->registerConsoleServiceProvider(Providers\CommandsServiceProvider::class);
     }
 
 
