@@ -4,7 +4,7 @@ namespace genius;
 use \Illuminate\Support\ServiceProvider;
 use Genius\Services\GeniusService;
 use Genius\Contacts\Genius as GeniusContract;
-class GeniusServiceProvider extends PackageServiceProvider
+class GeniusServiceProvider extends ServiceProvider
 {
     /**
      *
@@ -34,6 +34,20 @@ class GeniusServiceProvider extends PackageServiceProvider
      *
      */
     public function register()
+    {
+        $this->registerGeniusService();
+    }
+
+
+    /* -----------------------------------------------------------------
+     |  Other Methods
+     | -----------------------------------------------------------------
+     */
+
+    /**
+     * Register the log data class.
+     */
+    private function registerGeniusService()
     {
         $this->singleton(GeniusContract::class, GeniusService::class);
 
