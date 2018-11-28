@@ -57,7 +57,7 @@ class GeniusService implements Genius
      * @param $message
      * @return array
      */
-    private function getData($apiKey, $phoneNumber, $sender, $message)
+    protected function getData($apiKey, $phoneNumber, $sender, $message)
     {
         return [
             'apikey' => $apiKey,
@@ -72,7 +72,7 @@ class GeniusService implements Genius
      * @param $data
      * @return bool
      */
-    private function validateData($data)
+    protected function validateData($data)
     {
         if (empty($data['message'])) {
             Log::error('Empty message');
@@ -88,11 +88,11 @@ class GeniusService implements Genius
     /**
      *
      */
-    private function validateError()
+    protected function validateError()
     {
         Log::error('Validate Data Error');
         //Session::flash('api.status', 500);
-        //session()->flash('api.message', 'Validate Data Wrong');
+        //Session::flash('api.message', 'Validate Data Wrong');
         return;
     }
 
@@ -100,7 +100,7 @@ class GeniusService implements Genius
      * @param $data
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    private function requestAPI($data)
+    protected function requestAPI($data)
     {
         // Send the POST request with guzzle
         try {
@@ -117,6 +117,7 @@ class GeniusService implements Genius
                 //session()->flash('genius.message', 200);
                 //session()->flash('genius.message', 'Successfully to send SMS to User');
                 Log::info('Successfully to send SMS ' . $data['numbers']);
+                return;
             }
         } catch (\Exception $e) {
             return $this->throwException($e);
@@ -127,23 +128,23 @@ class GeniusService implements Genius
     /**
      * @param $body
      */
-    private function validateMessage($body)
+    protected function validateMessage($body)
     {
         $message = $body->warnings[0]->message . ' ,' . $body->errors[0]->message;
         Log::error('Fail Ooredoo SMS Service Fail because of ' . $message);
-        session()->flash('genius.message', 500);
-        session()->flash('genius.message', 'Fail to send SMS to User');
+        //Session::flash('genius.message', 500);
+        //Session::flash('genius.message', 'Fail to send SMS to User');
         return;
     }
 
     /**
      * @param $e
      */
-    private function throwException($e)
+    protected function throwException($e)
     {
         Log::error('Fail Ooredoo SMS Service Fail because of ' . $e->getMessage());
-        session()->flash('api.status', 500);
-        session()->flash('api.message', 'Something Wrong! Ooredoo SMS Service Fail');
+        //Session::flash('api.status', 500);
+        //Session::flash('api.message', 'Something Wrong! Ooredoo SMS Service Fail');
         return;
     }
 

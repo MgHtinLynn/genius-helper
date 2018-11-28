@@ -21,12 +21,5 @@ interface Genius
      * @return Genius
      */
     public function sendSMSService(array $phoneNumber, string $message): self;
-
-    /**
-     * @param $apiKey
-     * @param $phoneNumber
-     * @param $sender
-     * @param $message
-     * @return Genius
-     */
 }
+
