@@ -11,7 +11,7 @@ namespace Genius\Traits;
 
 use Carbon\Carbon;
 
-trait GeniusService
+trait GeniusHelper
 {
     /**
      * @param $value
