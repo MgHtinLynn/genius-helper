@@ -52,7 +52,7 @@ class GeniusServiceProvider extends ServiceProvider
         $this->singleton(GeniusContract::class, GeniusService::class);
 
         // Registering the Facade
-        if ($facade = $this->config()->get('log-viewer.facade')) {
+        if ($facade = $this->config()->get('geniusService.facade')) {
             $this->alias($facade, Facades\Genius::class);
         }
     }
