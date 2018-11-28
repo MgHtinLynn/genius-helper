@@ -1,21 +1,18 @@
 <?php
 namespace genius;
 
-use \Illuminate\Support\ServiceProvider;
+use Arcanedev\Support\PackageServiceProvider;
 use Genius\Services\GeniusService;
 use Genius\Contacts\Genius as GeniusContract;
-class GeniusServiceProvider extends ServiceProvider
+class GeniusServiceProvider extends PackageServiceProvider
 {
     /**
      *
      */
     public function boot()
     {
-        if ($this->app->runningInConsole()) {
-            $this->publishes([
-                __DIR__ . '/../config/geniusService.php' => config_path('geniusService.php'),
-            ], 'config');
-        }
+        parent::boot();
+        $this->publishConfig();
     }
 
     /**
@@ -35,7 +32,10 @@ class GeniusServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        parent::register();
+        $this->registerConfig();
         $this->registerGeniusService();
+        $this->registerAliases();
     }
 
 
@@ -49,7 +49,7 @@ class GeniusServiceProvider extends ServiceProvider
      */
     private function registerGeniusService()
     {
-        $this->app->singleton(GeniusContract::class, GeniusService::class);
+        $this->singleton(GeniusContract::class, GeniusService::class);
 
         // Registering the Facade
         if ($facade = $this->config()->get('geniusService.facade')) {
