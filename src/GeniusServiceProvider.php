@@ -64,8 +64,8 @@ class GeniusServiceProvider extends PackageServiceProvider
         //$this->bind(SMSContract::class, SMSService::class);
 
         // Registering the Facade
-//        if ($facade = $this->config()->get('SMSService.facade')) {
-//            $this->alias($facade, Facades\SMS::class);
-//        }
+        if ($facade = $this->config()->get('genius.facade')) {
+            $this->alias($facade, Facades\Genius::class);
+        }
     }
 }

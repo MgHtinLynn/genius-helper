@@ -45,14 +45,5 @@ return [
     |
     */
 
-    'testing' => env('ooredooTesting', false),
-
-
-    /* -----------------------------------------------------------------
-     |  Genius's Facade
-     | -----------------------------------------------------------------
-     */
-
-    'facade'        => 'SMS',
-
+    'testing' => env('ooredooTesting', false)
 ];
