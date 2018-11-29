@@ -17,9 +17,7 @@
     "minimum-stability": "dev",
     "require": {
         "php" : ">=7.0",
-        "guzzlehttp/guzzle": "^6.3",
-        "arcanedev/support": "~4.4.0",
-        "ext-json": "*"
+        "arcanedev/support": "~4.4.0"
     },
     "require-dev": {
       "phpunit/phpunit": "^6.5 || ^7.0",
