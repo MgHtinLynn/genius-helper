@@ -1,9 +1,18 @@
 <?php
+
 namespace genius;
 
 use Arcanedev\Support\PackageServiceProvider;
 use Genius\Providers\CommandsServiceProvider;
 use Genius\Contacts\Genius as GeniusContract;
+use Genius\Services\GeniusService;
+
+/**
+ * Class     Genius Service Provider
+ *
+ * @package  Htinlynn\Genius
+ * @author   HtinLynn <htilin01@gmail.com>
+ */
 class GeniusServiceProvider extends PackageServiceProvider
 {
     /* -----------------------------------------------------------------
@@ -17,13 +26,13 @@ class GeniusServiceProvider extends PackageServiceProvider
      * @var string
      */
     protected $package = 'genius';
+
     /**
      *
      */
     public function boot()
     {
         parent::boot();
-        $this->publishConfig();
     }
 
     /**
@@ -61,7 +70,11 @@ class GeniusServiceProvider extends PackageServiceProvider
      */
     private function registerGeniusService()
     {
-        //$this->bind(SMSContract::class, SMSService::class);
+        //Bind Important Interfaces
+        $this->singleton(
+            GeniusContract::class,
+            GeniusService::class
+        );
 
         // Registering the Facade
         if ($facade = $this->config()->get('genius.facade')) {

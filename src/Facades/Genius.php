@@ -9,7 +9,12 @@
 namespace Genius\Facades;
 use Illuminate\Support\Facades\Facade;
 use Genius\Contacts\Genius as SMSContract;
-
+/**
+ * Class     Genius Facade
+ *
+ * @package  Htinlynn\Genius\Facade
+ * @author   HtinLynn <htilin01@gmail.com>
+ */
 class Genius extends Facade
 {
     /**
