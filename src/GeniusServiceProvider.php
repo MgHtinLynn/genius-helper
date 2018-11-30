@@ -3,8 +3,10 @@
 namespace genius;
 
 use Arcanedev\Support\PackageServiceProvider;
+use Genius\Contacts\BaseRepositoryInterface;
 use Genius\Providers\CommandsServiceProvider;
 use Genius\Contacts\Genius as GeniusContract;
+use Genius\Repository\BaseRepository;
 use Genius\Services\GeniusService;
 
 /**
@@ -44,6 +46,7 @@ class GeniusServiceProvider extends PackageServiceProvider
     {
         return [
             GeniusContract::class,
+            BaseRepositoryInterface::class
         ];
     }
 
@@ -74,6 +77,10 @@ class GeniusServiceProvider extends PackageServiceProvider
         $this->singleton(
             GeniusContract::class,
             GeniusService::class
+        );
+        $this->singleton(
+            BaseRepositoryInterface::class,
+            BaseRepository::class
         );
 
         // Registering the Facade
