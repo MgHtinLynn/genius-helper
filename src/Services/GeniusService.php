@@ -9,7 +9,7 @@
 namespace Genius\Services;
 
 
-use Genius\Contacts\Genius;
+use Genius\Contacts\GeniusInterface;
 use Rabbit;
 
 /**
@@ -18,7 +18,7 @@ use Rabbit;
  * @package  Htinlynn\Genius\Service
  * @author   HtinLynn <htilin01@gmail.com>
  */
-class GeniusService implements Genius
+class GeniusService implements GeniusInterface
 {
     /**
      * Genius constructor.

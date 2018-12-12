@@ -8,7 +8,7 @@
 
 namespace Genius\Facades;
 use Illuminate\Support\Facades\Facade;
-use Genius\Contacts\Genius as SMSContract;
+use Genius\Contacts\GeniusInterface;
 /**
  * Class     Genius Facade
  *
@@ -22,5 +22,5 @@ class Genius extends Facade
      *
      * @return string
      */
-    protected static function getFacadeAccessor() { return SMSContract::class; }
+    protected static function getFacadeAccessor() { return GeniusInterface::class; }
 }

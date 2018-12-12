@@ -3,10 +3,8 @@
 namespace genius;
 
 use Arcanedev\Support\PackageServiceProvider;
-use Genius\Contacts\BaseRepositoryInterface;
 use Genius\Providers\CommandsServiceProvider;
-use Genius\Contacts\Genius as GeniusContract;
-use Genius\Repository\BaseRepository;
+use Genius\Contacts\GeniusInterface;
 use Genius\Services\GeniusService;
 
 /**
@@ -45,8 +43,7 @@ class GeniusServiceProvider extends PackageServiceProvider
     public function provides()
     {
         return [
-            GeniusContract::class,
-            BaseRepositoryInterface::class
+            GeniusInterface::class
         ];
     }
 
@@ -75,12 +72,8 @@ class GeniusServiceProvider extends PackageServiceProvider
     {
         //Bind Important Interfaces
         $this->singleton(
-            GeniusContract::class,
+            GeniusInterface::class,
             GeniusService::class
-        );
-        $this->singleton(
-            BaseRepositoryInterface::class,
-            BaseRepository::class
         );
 
         // Registering the Facade
@@ -89,3 +82,4 @@ class GeniusServiceProvider extends PackageServiceProvider
         }
     }
 }
+

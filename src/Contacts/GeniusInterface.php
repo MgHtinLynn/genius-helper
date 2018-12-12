@@ -14,7 +14,7 @@ namespace Genius\Contacts;
  * @package  Htinlynn\Genius\Contracts
  * @author   HtinLynn <htilin01@gmail.com>
  */
-interface Genius
+interface GeniusInterface
 {
     /**
      * Genius constructor.
