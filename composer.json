@@ -1,6 +1,6 @@
 {
     "name": "htinlynn/genius",
-    "description": "service for ooredoo sms and m-pitesan",
+    "description": "service for laravel helper method",
     "type": "library",
     "license": "MIT",
     "keywords": [
