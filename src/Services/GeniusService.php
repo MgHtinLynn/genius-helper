@@ -10,7 +10,6 @@ namespace Genius\Services;
 
 
 use Genius\Contacts\GeniusInterface;
-use Rabbit;
 
 /**
  * Class     Genius Service
