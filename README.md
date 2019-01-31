@@ -100,7 +100,24 @@ $this->epochToDateByDateFormat($epochString,$format);
 Noted: All Date Time String are using UTC timezone
 Request Parameter And Respond Data are using UTC timezone
 
+## License
 
+Released under the MIT License, see [LICENSE](LICENSE).
+
+[ico-version]: https://img.shields.io/packagist/v/MgHtinLynn/genius-helper.svg?style=flat-square
+[ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
+[ico-travis]: https://img.shields.io/travis/MgHtinLynn/genius-helper/master.svg?style=flat-square
+[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/MgHtinLynn/genius-helper.svg?style=flat-square
+[ico-code-quality]: https://img.shields.io/scrutinizer/g/MgHtinLynn/genius-helper.svg?style=flat-square
+[ico-downloads]: https://img.shields.io/packagist/dt/MgHtinLynn/genius-helper.svg?style=flat-square
+
+[link-packagist]: https://packagist.org/packages/MgHtinLynn/genius
+[link-travis]: https://travis-ci.org/MgHtinLynn/genius
+[link-scrutinizer]: https://scrutinizer-ci.com/g/MgHtinLynn/genius/code-structure
+[link-code-quality]: https://scrutinizer-ci.com/g/MgHtinLynn/genius
+[link-downloads]: https://packagist.org/packages/MgHtinLynn/genius
+[link-author]: https://github.com/MgHtinLynn
+[link-contributors]: ../../contributors
 
 
 
