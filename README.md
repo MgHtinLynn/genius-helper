@@ -64,16 +64,16 @@ public function __construct(Genius\Contacts\GeniusInterface $geniusInterface)
 ```
 Available Method
 ```php
-$geniusHelepr->isZawGyi($string);
 $geniusHelepr->randomDigit($length,$count);
+$geniusHelepr->formatBytes($size);
 ```
 
 ### ||
 
 Facades
 ```php
-Genius::isZawGyi($string);
 Genius::randomDigit($length,$count);
+Genius::formatBytes($size);
 ```
 
 ## Trait Method
