@@ -19,7 +19,6 @@
     "require": {
         "php" : ">=7.1.3",
         "arcanedev/support": "~4.4.0",
-        "rabbit-converter/rabbit-php": "dev-master",
         "illuminate/Database": "~5.7.0",
         "illuminate/Notifications": "~5.7.0",
         "illuminate/Contracts": "~5.7.0",
