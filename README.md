@@ -2,8 +2,7 @@
 Helper Features For Development with Laravel
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
-[![Software License][ico-license]](LICENSE.md)
-[![Build Status][ico-travis]][link-travis]
+[![Software License][ico-license]](LICENSE)
 [![Total Downloads][ico-downloads]][link-downloads]
 
 
@@ -106,16 +105,14 @@ Released under the MIT License, see [LICENSE](LICENSE).
 
 [ico-version]: https://img.shields.io/packagist/v/MgHtinLynn/genius-helper.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
-[ico-travis]: https://img.shields.io/travis/MgHtinLynn/genius-helper/master.svg?style=flat-square
 [ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/MgHtinLynn/genius-helper.svg?style=flat-square
 [ico-code-quality]: https://img.shields.io/scrutinizer/g/MgHtinLynn/genius-helper.svg?style=flat-square
-[ico-downloads]: https://img.shields.io/packagist/dt/MgHtinLynn/genius-helper.svg?style=flat-square
+[ico-downloads]: https://img.shields.io/packagist/dt/htinLynn/genius-helper.svg?style=flat-square
 
-[link-packagist]: https://packagist.org/packages/MgHtinLynn/genius-helper
-[link-travis]: https://travis-ci.org/MgHtinLynn/genius-helper
+[link-packagist]: https://packagist.org/packages/htinLynn/genius-helper
 [link-scrutinizer]: https://scrutinizer-ci.com/g/MgHtinLynn/genius/code-structure
 [link-code-quality]: https://scrutinizer-ci.com/g/MgHtinLynn/genius-helper
-[link-downloads]: https://packagist.org/packages/MgHtinLynn/genius-helper
+[link-downloads]: https://packagist.org/packages/HtinLynn/genius-helper
 [link-author]: https://github.com/MgHtinLynn
 [link-contributors]: ../../contributors
 
