@@ -34,17 +34,6 @@ interface GeniusInterface
      */
     public function formatBytes($size): string;
 
-    /**
-     * @param $textString
-     * @return bool
-     */
-    public function isZawGyi($textString): bool;
-
-    /**
-     * @param $text
-     * @return string
-     */
-    public function toUnicode($text): string;
 
     /**
      * @param $needle

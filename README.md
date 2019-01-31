@@ -2,6 +2,7 @@
 Helper Features For Development with Laravel
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
+[![Quality Score][ico-code-quality]][link-code-quality]
 [![Software License][ico-license]](LICENSE)
 [![Total Downloads][ico-downloads]][link-downloads]
 
@@ -20,9 +21,7 @@ Helper Features For Development with Laravel
     * Date String To Date with Format
 * Helper Method
     * Get Random Digit
-    * Get File with File Format String 
-    * Detect ZawGyi
-    * Convert To Unicode   
+    * Get File with File Format String  
 ## Installation
 
 Require the `htinlynn/genius` package in your `composer.json` and update your dependencies:
@@ -67,8 +66,6 @@ Available Method
 ```php
 $geniusHelepr->isZawGyi($string);
 $geniusHelepr->randomDigit($length,$count);
-$geniusHelepr->formatBytes($size);
-$geniusHelepr->toUnicode($zawGyiString);
 ```
 
 ### ||
@@ -77,8 +74,6 @@ Facades
 ```php
 Genius::isZawGyi($string);
 Genius::randomDigit($length,$count);
-Genius::formatBytes($size);
-Genius::toUnicode($zawGyiString);
 ```
 
 ## Trait Method
