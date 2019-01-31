@@ -1,11 +1,12 @@
 {
-    "name": "htinlynn/genius",
+    "name": "htinlynn/genius-helper",
     "description": "service for laravel helper method",
     "type": "library",
     "license": "MIT",
     "keywords": [
         "htinlynn",
-        "genius"
+        "genius",
+        "genius-helper"
     ],
     "authors": [
         {

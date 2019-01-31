@@ -111,11 +111,11 @@ Released under the MIT License, see [LICENSE](LICENSE).
 [ico-code-quality]: https://img.shields.io/scrutinizer/g/MgHtinLynn/genius-helper.svg?style=flat-square
 [ico-downloads]: https://img.shields.io/packagist/dt/MgHtinLynn/genius-helper.svg?style=flat-square
 
-[link-packagist]: https://packagist.org/packages/MgHtinLynn/genius
-[link-travis]: https://travis-ci.org/MgHtinLynn/genius
+[link-packagist]: https://packagist.org/packages/MgHtinLynn/genius-helper
+[link-travis]: https://travis-ci.org/MgHtinLynn/genius-helper
 [link-scrutinizer]: https://scrutinizer-ci.com/g/MgHtinLynn/genius/code-structure
-[link-code-quality]: https://scrutinizer-ci.com/g/MgHtinLynn/genius
-[link-downloads]: https://packagist.org/packages/MgHtinLynn/genius
+[link-code-quality]: https://scrutinizer-ci.com/g/MgHtinLynn/genius-helper
+[link-downloads]: https://packagist.org/packages/MgHtinLynn/genius-helper
 [link-author]: https://github.com/MgHtinLynn
 [link-contributors]: ../../contributors
 
