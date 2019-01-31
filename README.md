@@ -50,16 +50,17 @@ $ php artisan all:clearandcache
 ## Usage For Helper Class
 Init the class
 ```php
-$geniusHelepr = new \Genius\Services\GeniusService();
+$geniusHelper = new \Genius\Services\GeniusService();
 ```
 
 ### &&
 
 Dependency injection on construct or specific function
 ```php
+protected $geniusInterface;
 public function __construct(Genius\Contacts\GeniusInterface $geniusInterface)
 {
-    
+    $this->geniusInterface = $geniusInterface;
 }
 ```
 Available Method
