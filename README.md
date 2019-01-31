@@ -103,7 +103,7 @@ Request Parameter And Respond Data are using UTC timezone
 
 Released under the MIT License, see [LICENSE](LICENSE).
 
-[ico-version]: https://img.shields.io/packagist/v/htinLynn/genius-helper.svg?style=flat-square
+[ico-version]: https://img.shields.io/packagist/vpre/htinLynn/genius-helper.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
 [ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/MgHtinLynn/genius-helper.svg?style=flat-square
 [ico-code-quality]: https://img.shields.io/scrutinizer/g/MgHtinLynn/genius-helper.svg?style=flat-square
