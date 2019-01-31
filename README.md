@@ -28,7 +28,7 @@ Helper Features For Development with Laravel
 Require the `htinlynn/genius` package in your `composer.json` and update your dependencies:
 
 ```sh
-$ composer require htinlynn/genius
+$ composer require htinlynn/genius-helper
 ```
 
 ## Usage For Custom Command
