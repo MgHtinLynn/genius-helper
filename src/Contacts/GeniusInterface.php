@@ -3,15 +3,14 @@
  * Created by PhpStorm.
  * User: htinlynn
  * Date: 11/26/18
- * Time: 4:17 PM
+ * Time: 4:17 PM.
  */
 
 namespace Genius\Contacts;
 
 /**
- * Class     Genius Interface
+ * Class     Genius Interface.
  *
- * @package  Htinlynn\Genius\Contracts
  * @author   HtinLynn <htilin01@gmail.com>
  */
 interface GeniusInterface
@@ -24,25 +23,25 @@ interface GeniusInterface
     /**
      * @param $length
      * @param $count
+     *
      * @return string
      */
     public function randomDigit($length, $count): string;
 
     /**
      * @param $size
+     *
      * @return string
      */
     public function formatBytes($size): string;
 
-
     /**
      * @param $needle
      * @param $haystack
+     *
      * @author Pyae Hein
+     *
      * @return bool
      */
     public function inArrayInsensitive($needle, $haystack) : bool;
-
-
 }
-
