@@ -99,13 +99,13 @@ $this->epochToDate($epochString);
 $this->toDateFormat($dateString);
 $this->epochToDateByDateFormat($epochString,$format);
 ```
-##Improvement
-*Test Case
-*Contribution Guide
-*Version Release Note
+## Improvement
+* Test Case
+* Contribution Guide
+* Version Release Note
 
-##Credit
-*Ko [Nay Lin Aung](https://github.com/stevenay) [myanfont] (https://github.com/stevenay/myanfont) PHP Library
+## Credit
+* Ko [Nay Lin Aung](https://github.com/stevenay) [myanfont] (https://github.com/stevenay/myanfont) PHP Library
 
 
 
