@@ -10,6 +10,7 @@ namespace Genius\Services;
 
 
 use Genius\Contacts\GeniusInterface;
+use SteveNay\MyanFont\MyanFont;
 
 /**
  * Class     Genius Service
@@ -75,6 +76,43 @@ class GeniusService implements GeniusInterface
             $haystack[$k] = strtolower($v);
         }
         return in_array($needle, $haystack);
+    }
+
+    /**
+     * @param string $content
+     * @param string $default
+     * @return string
+     */
+    public function fontDetect(string $content, $default = "zawgyi")
+    {
+        return MyanFont::fontDetect($content, $default);
+    }
+
+    /**
+     * @param string $content
+     * @return bool
+     */
+    public function isMyanmarSar(string $content)
+    {
+        return MyanFont::isMyanmarSar($content);
+    }
+
+    /**
+     * @param string $content
+     * @return mixed
+     */
+    public function zawGyiToUnicode(string $content)
+    {
+        return MyanFont::uni2zg($content);
+    }
+
+    /**
+     * @param string $content
+     * @return mixed
+     */
+    public function unicodeToZawGyi(string $content)
+    {
+        return MyanFont::uni2zg($content);
     }
 }
 

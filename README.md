@@ -20,6 +20,10 @@ Helper Features For Development with Laravel
     * Epoch To Hour
     * Date String To Date with Format
 * Helper Method
+    * Font Detect
+    * Is Myanmar Font?
+    * zawGyiToUnicode
+    * UnicodeToZawGyi
     * Get Random Digit
     * Get File with File Format String  
 ## Installation
@@ -64,8 +68,10 @@ public function __construct(Genius\Contacts\GeniusInterface $geniusInterface)
 ```
 Available Method
 ```php
-$geniusHelepr->randomDigit($length,$count);
-$geniusHelepr->formatBytes($size);
+$geniusHelper->randomDigit($length,$count);
+$geniusHelper->formatBytes($size);
+$geniusHelper->zawGyiToUnicode($content);
+$geniusHelper->unicodeToZawGyi($content);
 ```
 
 ### ||
@@ -73,6 +79,8 @@ $geniusHelepr->formatBytes($size);
 Facades
 ```php
 Genius::randomDigit($length,$count);
+Genius::formatBytes($size);
+Genius::formatBytes($size);
 Genius::formatBytes($size);
 ```
 
@@ -91,6 +99,15 @@ $this->epochToDate($epochString);
 $this->toDateFormat($dateString);
 $this->epochToDateByDateFormat($epochString,$format);
 ```
+##Improvement
+*Test Case
+*Contribution Guide
+*Version Release Note
+
+##Credit
+*Ko [Nay Lin Aung](https://github.com/stevenay) [myanfont] (https://github.com/stevenay/myanfont) PHP Library
+
+
 
 Noted: All Date Time String are using UTC timezone
 Request Parameter And Respond Data are using UTC timezone

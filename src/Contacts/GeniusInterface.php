@@ -44,5 +44,29 @@ interface GeniusInterface
     public function inArrayInsensitive($needle, $haystack) : bool;
 
 
+    /**
+     * @param string $content
+     * @param string $default
+     * @return mixed
+     */
+    public function fontDetect(string $content, $default = "zawgyi");
+
+    /**
+     * @param string $content
+     * @return mixed
+     */
+    public function isMyanmarSar(string $content);
+
+    /**
+     * @param string $content
+     * @return mixed
+     */
+    public function zawGyiToUnicode(string $content);
+
+    /**
+     * @param string $content
+     * @return mixed
+     */
+    public function unicodeToZawGyi(string $content);
 }
 

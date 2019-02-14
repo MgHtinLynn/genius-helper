@@ -17,12 +17,13 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "php" : ">=7.1.3",
+        "php": ">=7.1.3",
         "arcanedev/support": "~4.4.0",
+        "illuminate/Contracts": "~5.7.0",
         "illuminate/Database": "~5.7.0",
         "illuminate/Notifications": "~5.7.0",
-        "illuminate/Contracts": "~5.7.0",
-        "illuminate/support":    "~5.7.0"
+        "illuminate/support": "~5.7.0",
+        "stevenay/myanfont": "dev-master"
     },
     "require-dev": {
       "phpunit/phpunit": "^6.5 || ^7.0",
