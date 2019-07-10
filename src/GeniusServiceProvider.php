@@ -11,7 +11,7 @@ use Genius\Services\GeniusService;
  * Class     Genius Service Provider
  *
  * @package  Htinlynn\Genius
- * @author   HtinLynn <htilin01@gmail.com>
+ * @author   HtinLynn <htinlin01@gmail.com>
  */
 class GeniusServiceProvider extends PackageServiceProvider
 {
