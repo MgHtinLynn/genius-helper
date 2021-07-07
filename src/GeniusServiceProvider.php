@@ -3,14 +3,13 @@
 namespace genius;
 
 use Arcanedev\Support\PackageServiceProvider;
-use Genius\Providers\CommandsServiceProvider;
 use Genius\Contacts\GeniusInterface;
+use Genius\Providers\CommandsServiceProvider;
 use Genius\Services\GeniusService;
 
 /**
- * Class     Genius Service Provider
+ * Class     Genius Service Provider.
  *
- * @package  Htinlynn\Genius
  * @author   HtinLynn <htinlin01@gmail.com>
  */
 class GeniusServiceProvider extends PackageServiceProvider
@@ -27,9 +26,6 @@ class GeniusServiceProvider extends PackageServiceProvider
      */
     protected $package = 'genius';
 
-    /**
-     *
-     */
     public function boot()
     {
         parent::boot();
@@ -43,13 +39,10 @@ class GeniusServiceProvider extends PackageServiceProvider
     public function provides()
     {
         return [
-            GeniusInterface::class
+            GeniusInterface::class,
         ];
     }
 
-    /**
-     *
-     */
     public function register()
     {
         parent::register();
@@ -58,7 +51,6 @@ class GeniusServiceProvider extends PackageServiceProvider
         $this->registerAliases();
         $this->registerConsoleServiceProvider(CommandsServiceProvider::class);
     }
-
 
     /* -----------------------------------------------------------------
      |  Other Methods
@@ -82,4 +74,3 @@ class GeniusServiceProvider extends PackageServiceProvider
         }
     }
 }
-

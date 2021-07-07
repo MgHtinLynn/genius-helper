@@ -3,16 +3,17 @@
  * Created by PhpStorm.
  * User: htinlynn
  * Date: 11/28/18
- * Time: 11:11 AM
+ * Time: 11:11 AM.
  */
 
 namespace Genius\Facades;
-use Illuminate\Support\Facades\Facade;
+
 use Genius\Contacts\GeniusInterface;
+use Illuminate\Support\Facades\Facade;
+
 /**
- * Class     Genius Facade
+ * Class     Genius Facade.
  *
- * @package  Htinlynn\Genius\Facade
  * @author   HtinLynn <htilin01@gmail.com>
  */
 class Genius extends Facade
@@ -22,5 +23,8 @@ class Genius extends Facade
      *
      * @return string
      */
-    protected static function getFacadeAccessor() { return GeniusInterface::class; }
+    protected static function getFacadeAccessor()
+    {
+        return GeniusInterface::class;
+    }
 }
